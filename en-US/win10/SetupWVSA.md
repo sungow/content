@@ -3,13 +3,14 @@ layout: default
 title: SetupWindowsVirualShieldsArduino
 permalink: /en-US/win10/SetupWVSA.htm
 lang: en-US
+deviceName: WVSA
 ---
 
 #Get Started
 
 This section explains how to set up your Windows Virtual Shields for Arduino!
 
-{% include steps.html device="WVSA" %}
+{% include steps.html device=page.deviceName %}
 
 #Setup for Windows Virtual Shields for Arduino (Arduino and PC)
 
@@ -51,4 +52,9 @@ This section explains how to set up your Windows Virtual Shields for Arduino!
  2. Before uploading, temporarily remove the Bluetooth TX and RX wires from the Arduino. (There is only one serial port shared between the USB and Bluetooth. The Bluetooth interferes with the upload).
  3. Upload the sketch.
  4. Replace the Bluetooth TX and RX wires into the Arduino pins. (Bluetooth TX to Arduino RX and Bluetooth RX to Arduino TX).
- 5. In order to see anything on the phone, you will need to go to the next step (Set up your Phone and PC).
+ 5. On the phone, pair the Bluetooth device in the Bluetooth settings. (BlueSMiRF default pin code is 1234. NOTE: The red blinking light on the BlueSMiRF continues to blink red after a successful pairing. This is expected. It only turns green after a connecting with the application).
+ 6. Open the Virtual Shields for Arduino app an view the main screen. 
+ 7. Press the Reset button on your Arduino.
+ 5. You should see a hello message on the Virtual Shields for Arduino phone app.
+
+ {% include nextsteps.html device=page.deviceName %}

@@ -14,17 +14,13 @@ This is a headed sample.  To better understand what headed mode is and how to co
 
 ###Load the project in Visual Studio
 
-You can find this sample [here](https://github.com/ms-iot/samples/tree/develop/Accelerometer).  Make a copy of the folder on your disk and open the project from Visual Studio.
-
-Make sure you set the 'Remote Debugging' setting to point to your device. Go back to the basic 'Hello World' [sample]({{site.baseurl}}/{{page.lang}}/win10/samples/HelloWorld.htm) if you need guidance.
-
-If you're building for MinnowBoard Max, select `x86` in the architecture dropdown.  If you're building for Raspberry Pi 2, select `ARM`.
+You can find the source code for this sample by downloading a zip of all of our samples [here](https://github.com/ms-iot/samples/archive/develop.zip) and navigating to the `samples-develop\I2CAccelerometer`.  Make a copy of the folder on your disk and open the project from Visual Studio.
 
 ###Connect the I2C Accelerometer to your device
 
 You'll need a few components:
 
-* an [ADXL345 accelerometer board from Sparkfun](https://www.sparkfun.com/products/9836){:target="_blank"} with pin headers soldered on
+* <a name="I2C_Accelerometer"></a>an [ADXL345 accelerometer board from Sparkfun](https://www.sparkfun.com/products/9836){:target="_blank"} with pin headers soldered on
 
 * a breadboard and a couple of male-to-female connector wires
 
@@ -101,7 +97,9 @@ public sealed partial class MainPage : Page
     // ...
 }
 {% endhighlight %}  
- Now you should be able to press F5 from Visual Studio: The I2CAccelerometer app will deploy and start, and you should see accelerometer data show up on screen.
+
+Follow the instructions to [setup remote debugging and deploy the app]({{site.baseurl}}/{{page.lang}}/win10/AppDeployment.htm#csharp).
+ The I2CAccelerometer app will deploy and start, and you should see accelerometer data show up on screen.
  If you have your accelerometer flat on a surface, the Z axis should read close to 1.000G, while X and Y are close to 0.000G. The values will fluctuate a little even if the device is standing still.
  This is normal and is due to minute vibrations and electrical noise. If you tilt or shake the sensor, you should see the values change in response. Note that this sample configures the device in 4G mode,
 so you wont be able to see G readings higher than 4Gs.
